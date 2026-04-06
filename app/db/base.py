@@ -1,2 +1,2 @@
-from sqlalchemy.orm import declerative_base
-Base= declerative_base()
+from sqlalchemy.orm import declarative_base
+Base= declarative_base()
