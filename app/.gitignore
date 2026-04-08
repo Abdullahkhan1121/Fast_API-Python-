@@ -1,0 +1,56 @@
+# 🔥 Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 🔥 Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# 🔥 Environment variables
+.env
+.env.*
+
+# 🔥 Logs
+*.log
+
+# 🔥 SQLite database
+*.db
+*.sqlite3
+
+# 🔥 VS Code settings
+.vscode/
+
+# 🔥 PyCharm / IntelliJ
+.idea/
+
+# 🔥 OS files
+.DS_Store
+Thumbs.db
+
+# 🔥 Build / dist
+build/
+dist/
+*.egg-info/
+
+# 🔥 Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 🔥 Migrations (optional, if using Alembic)
+alembic/versions/
+
+# 🔥 Static files (optional depending on setup)
+staticfiles/
+
+# 🔥 Node (if React frontend inside same repo)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# 🔥 Secrets / keys
+*.pem
+*.key
