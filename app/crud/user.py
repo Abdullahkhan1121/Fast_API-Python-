@@ -12,7 +12,7 @@ def create_user(db: Session , user: UserCreate):
 def get_users(db:Session):
     return db.query(User).all()
 
-def get_user(db:Session):
+def get_user(db:Session , user_id:int):
     return db.query(User).filter(User.id == user_id).first()
 
 def update_user(db: Session , user_id: int , user: UserUpdate):
@@ -23,14 +23,14 @@ def update_user(db: Session , user_id: int , user: UserUpdate):
     db_user.name = user.name
     db_user.email = user.email
     db.commit()
-    db.refresh()
+    db.refresh(db_user)
     return db_user
 
-def dlete_user(db: Session , user_id: int):
+def delete_user(db: Session , user_id: int):
     db_user = get_user(db , user_id)
     if not db_user:
         return None
     
-    db.deleete(db_user)
+    db.delete(db_user)
     db.commit()
     return db_user
